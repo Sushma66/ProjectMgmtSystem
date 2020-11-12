@@ -18,117 +18,104 @@ if($role=="Admin")
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/logo.png" type="image/x-icon">
+
     <title>Project Management System</title>
+    <link rel="icon" type="image/png" href="images/logo.png" type="image/x-icon">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles3.css" rel="stylesheet">
-    <!--<style type="text/css">
-      body{
-           background: url('https://bmsit.ac.in/public/assets/images/slider/main.jpg'); 
-           background-position: center;
-           background-repeat: no-repeat; 
-           background-attachment: fixed;
-           background-size: 100% 100%;
-         }
-       h3{
-          color:white;
-         }
-       a{
-         color:yellow;
-        }
-       a:hover {
-          color: green;
-          background-color: transparent;
-          text-decoration: underline;
-         }
-       a:active {
-          color: red;
-          background-color: transparent;
-          text-decoration: underline;
-        }
+    <link href="css/style2.css" rel="stylesheet">
 
-    </style>-->
+    
 
   </head>
-<body>
+  <body >
+
     <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <img alt="BMSIT Logo" src="images/logo.png" width="200" height="100" class="rounded">
+	<div class="row">
+		<div class="col-md-12 topnavbar">
+      <div style="float: left; padding-right: 1%;">
+        <img src="images/logo.png" height="80"/>
+      </div>
+      <br>
+      <div style="float: left;">
+        <a style="font-family: Arial; font-size: 130%; color: #fff; font-weight: 600">BMS</a><br />
+        <a style="font-family: Calibri; color: #fff; font-size: 118%; font-weight: 600">INSTITUTE OF TECHNOLOGY</a>
+      </div>
+
+       <div class="col-md-12">
+        <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="ADMIN/student.php">
+            <span class="material-icons hidden-md-down">face</span><br class="hidden-md-down"> Student
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ADMIN/faculty.php">
+            <span class="material-icons hidden-md-down">assignment_ind</span><br class="hidden-md-down"> Faculty
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ADMIN/stsearch.php">
+            <span class="material-icons hidden-md-down">search</span><br class="hidden-md-down"> Student Search
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ADMIN/fa_search.php">
+            <span class="material-icons hidden-md-down">book_online</span><br class="hidden-md-down">Faculty Search
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ADMIN/allocate.php">
+            <span class="material-icons hidden-md-down">mediation</span><br class="hidden-md-down"> Allocate
+          </a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="ADMIN/skill.php">
+            <span class="material-icons hidden-md-down">insights</span><br class="hidden-md-down"> Skill Matrix
+          </a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="ADMIN/report.php">
+            <span class="material-icons hidden-md-down">description</span><br class="hidden-md-down"> Reports
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">
+            <span class="material-icons hidden-md-down">power_settings_new</span><br class="hidden-md-down"> Logout
+          </a>
+        </li>
+      </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h3 class="text-danger text-left">
-        Project Management System
-      </h3>
-    </div>
-    <div class="col-md-2">
-      <h3>
-       <?php
-       print $role;
-       ?>
-     </h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-1">
-       
-      <a href="ADMIN/student.php">
-        Add Student
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/faculty.php">
-        Add Faculty
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/stsearch.php">
-        Search Student
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/fa_search.php">
-        Search Faculty
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/allocate.php">
-        Allocate
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/skill.php">
-        Skill Matrix
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="ADMIN/report.php">
-        Reports
-      </a>
-    </div>
-    <div class="col-md-1">
-       
-      <a href="logout.php">
-        Logout
-      </a>
-    </div>
-    <div class="col-md-4">
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
+  <div class="container-fluid">
+  <div class="row mid-row">
+    <div class="col-md-12 col-lg-12">
+      <div class="display-box">
+        <h2><u>WELCOME</u></h2>
+        <br>
+        <!--<div>-->
+          <span class="material-icons">person</span>
+        <!--</div>-->
+        <div class="message">
+        <label style="float: center;">
+          <?php
+            print $role;
+            ?>
+         </label>
+         
+         
+              
+      </div>
+      </div>
     </div>
   </div>
+</div>
 </div>
 
     <script src="js/jquery.min.js"></script>

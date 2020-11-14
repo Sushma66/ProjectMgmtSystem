@@ -39,7 +39,7 @@ if($role=="Admin")
 {
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,7 +55,20 @@ if($role=="Admin")
 <title>Project Management System</title>
 </head>
 <div>
-    <body>
+    <body> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/logo.png" type="image/x-icon">
+    <title>Project Management System</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/facultystyles.css" rel="stylesheet">
+  </head>
+  <body>
 <?php
    header('Location:../Admin.php');
    ?>
@@ -64,7 +77,120 @@ if($role=="Admin")
 elseif($role=="Faculty")    
 {
 ?>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/logo.png" type="image/x-icon">
+    <title>Project Management System</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/facultystyles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-12 col-lg-12 col-sm-12 topnavbar">
+      <div class="message-box">
+        <label style="float: right;" class="message">
+          <?php
+            print $role;
+            echo "<br/>";
+            print $user;
+          ?>
+        </label>
+      </div>
+      <div style="float: left; padding-right: 1%;">
+        <a href="../Admin.php"><img src="../images/logo.png" height="80"/></a>
+      </div>
+      <br>
+      <div>
+        <a class="bms" style="color: #fff;">BMS</a><br />
+        <a class="institute" style="color: #fff;">INSTITUTE OF TECHNOLOGY</a>
+        <a class="bmsit" style="color: #fff;">BMSIT</a>
+      </div>
+      
+    </div>
+    </div>
+    <div class="row">
+    <div class="topnav" id="myTopnav">
+          <a class="nav-link" href="skill.php">
+            <span class="material-icons hidden-sm-down hidden-md-down">insights</span>&nbsp;&nbsp;&nbsp; Skill Matrix
+          </a>
+          <a class="nav-link" href="view.php">
+            <span class="material-icons hidden-sm-down hidden-md-down">view_module</span>&nbsp;&nbsp;&nbsp; View
+          </a>
+          <a class="nav-link" href="mail.php">
+            <span class="material-icons hidden-sm-down hidden-md-down">email</span>&nbsp;&nbsp;&nbsp; Mail
+          </a>
+          <a class="nav-link" href="meeting.php">
+            <span class="material-icons hidden-sm-down hidden-md-down">book_online</span>&nbsp;&nbsp;&nbsp; Meeting
+          </a>
+          <a class="nav-link" href="#">
+            <span class="material-icons hidden-sm-down hidden-md-down">description</span>&nbsp;&nbsp;&nbsp; Reports
+          </a>
+          <a class="nav-link" href="../logout.php">
+            <span class="material-icons hidden-sm-down hidden-md-down">power_settings_new</span>&nbsp;&nbsp;&nbsp; Logout
+          </a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <span class="material-icons">reorder</span>
+          </a>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+          <div class="display-box">
+            <form role="form" action="skill.php" method="post">
+                        <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label>Domain   :<font color="red">*</font></label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="domain" style="color: #fff;">
+                                </div>
+                                <br>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label>Research  :<font color="red">*</font></label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="research" style="color: #fff;">
+                                </div>
+                                <br>
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label>Other Skills: </label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="others" style="color: #fff;">
+                                </div>
+                            
+                            <br>
+                            <br>
+                            <div class="text-center">
+                                <input id="bt" type="submit" class="submit" name="update" value="Update" />
+                            </div>
+                   </form>
+        </div>
+      </div>
+    </div>
+</div>
+  <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script type="text/javascript">
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+      </script>    
+  </body>
+</html>
+
+        <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" type="text/css" href="../css.css">
@@ -93,9 +219,9 @@ elseif($role=="Faculty")
     <th width="646" scope="col"><font size="8" color="White">Project Managenent System</font></th>
     <th width="140" scope="col"><font color="White" size="5">
     <?php
-    print $role;
-    echo "<br/>";
-    print $user;
+    // print $role;
+    // echo "<br/>";
+    // print $user;
     ?>
         </font></th>
     <th width="63" scope="col">&nbsp;</th>
@@ -141,7 +267,7 @@ elseif($role=="Faculty")
     </tr>
   </table>
           </div>
-  </form>
+  </form> -->
  <?php
 }
 else   
@@ -153,15 +279,11 @@ else
 <?php
 }
 ?>
-</table>
 
-  <p>
     <?php
 }
 ?>
     
     
     
-  </p>
-  <p>&nbsp;</p>
-    </body>
+  

@@ -129,7 +129,7 @@ elseif($role=="Faculty")
           <a class="nav-link" href="meeting.php">
             <span class="material-icons hidden-sm-down hidden-md-down">book_online</span>&nbsp;&nbsp;&nbsp; Meeting
           </a>
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="report.php">
             <span class="material-icons hidden-sm-down hidden-md-down">description</span>&nbsp;&nbsp;&nbsp; Reports
           </a>
           <a class="nav-link" href="../logout.php">

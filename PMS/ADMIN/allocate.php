@@ -42,61 +42,93 @@ if($role=="Admin")
 {
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/logo.png" type="image/x-icon">
+    <title>Project Management System</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style 6.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-12 col-lg-12 col-sm-12 topnavbar">
+      <div class="message-box">
+        <label style="float: right;" class="message">
+          <?php
+            print $role;
+            
+          ?>
+        </label>
+      </div>
+      <div style="float: left; padding-right: 1%;">
+        <a href="../Admin.php"><img src="../images/logo.png" height="80"/></a>
+      </div>
+      <br>
+      <div>
+        <a class="bms" style="color: #fff;">BMS</a><br />
+        <a class="institute" style="color: #fff;">INSTITUTE OF TECHNOLOGY</a>
+        <a class="bmsit" style="color: #fff;">BMSIT</a>
+      </div>
+      
+    </div>
+    </div>
+    <div class="row">
+    <div class="topnav" id="myTopnav">
+          <a class="nav-link " href="student.php">
+            <span class="material-icons hidden-md-down">face</span><br class="hidden-md-down"> Student
+          </a>
+        
+          <a class="nav-link" href="faculty.php">
+            <span class="material-icons hidden-md-down">assignment_ind</span><br class="hidden-md-down"> Faculty
+          </a>
+        
+        
+          <a class="nav-link" href="stsearch.php">
+            <span class="material-icons hidden-md-down">search</span><br class="hidden-md-down"> Student Search
+          </a>
+          <a class="nav-link" href="fa_search.php">
+            <span class="material-icons hidden-md-down">book_online</span><br class="hidden-md-down">Faculty Search
+          </a>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <link rel="stylesheet" type="text/css" href="../css.css">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style>
-	body
-	{
-		background-image:url(../background.png);
-		background-repeat: no-repeat; 
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-</style>
-<title>Project Management System</title>
-</head>
-<div>
-<body>
-<table width="100%"  border="0"cellspacing="00" cellpadding="00">
-  <tr bgcolor="#D2691E">
-    <th width="74" scope="col">&nbsp;</th>
-    <th width="164" scope="col"><a href="../Admin.php"><img src="../logo1.png" alt="LOGO"/></a></th>
-    <th width="646" scope="col"><font size="8" color="White">Project Managenent System</font></th>
-    <th width="140" scope="col"><font color="White" size="5">
-	<?php
-    print $role;
-    ?></font></th>
-    <th width="63" scope="col">&nbsp;</th>
-  </tr>
-</table>
-<table width="100%" border="0" cellspacing="01" cellpadding="01">
-  <tr bgcolor="#99CCFF">
-      <th width="5%" scope="col"><h4>&nbsp;</h4></th>
-      <th width="12%" scope="col"><a href="student.php">Add Student</a></th>
-      <th width="11%" scope="col"><a href="faculty.php">Add Faculty</a></th>
-      <th width="11%" scope="col"><a href="stsearch.php">Search Student</a></th>
-      <th width="11%" scope="col"><a href="fa_search.php">Search Faculty </a></th>
-      <th width="11%" scope="col"><a href="allocate.php">Allocate</a></th>
-      <th width="11%" scope="col"><a href="skill.php">Skill Matrix</a></th>
-      <th width="11%" scope="col"><a href="report.php">Reports</a></th>
-      <th width="11%" scope="col"><a href="../logout.php">Logout</a></th>
-    <th width="6%" scope="col">&nbsp;</th>
-  </tr>
-</table>
-    <form method="post" action="allocate.php">
-      <br/><br/>
-       <div style="background-color: beige; margin-left: 33%; alignment-adjust: central; width: 35%">
-           <table align="center"  width="100%">
-  <tr>
-    <td rowspan="2">&nbsp;</td>
-    <td align="right"><br/><font size="5">Student ID&nbsp;:&nbsp;</font></td>
-    <td>
-        <br/><br/>
-        <?php
+
+          <a class="nav-link" href="allocate.php">
+            <span class="material-icons hidden-md-down">mediation</span><br class="hidden-md-down"> Allocate
+          </a>
+       
+          <a class="nav-link" href="skill.php">
+            <span class="material-icons hidden-md-down">insights</span><br class="hidden-md-down"> Skill Matrix
+          </a>
+
+          <a class="nav-link" href="ADMIN/report.php">
+            <span class="material-icons hidden-md-down">description</span><br class="hidden-md-down"> Reports
+          </a>
+       
+          <a class="nav-link" href="../logout.php">
+            <span class="material-icons hidden-md-down">power_settings_new</span><br class="hidden-md-down"> Logout
+          </a>
+        
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <span class="material-icons">reorder</span>
+          </a>
+    </div>
+    <div class="col-md-12">
+      <form role="form" action="allocate.php" method="post">
+      <div class="row">
+          <div class="display-box">
+            
+                        <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label>Student ID         &nbsp;&nbsp; &nbsp; &nbsp;  :</label>
+                                    </div>
+
+                                    <?php
             include '../connection.php';
              $sql="select s_id from student";
              $result=  mysqli_query($conn, $sql)
@@ -111,12 +143,10 @@ if($role=="Admin")
                  <?php
                  }
      ?>
-            </select> <br/><br/>
-    </td>
-    <td rowspan="2">&nbsp;</td>
-               </tr>
-       </div>
-       <?php
+            </select> 
+
+          </div>
+          <?php
        if (isset($_POST['chk']))
        {
                     $username=$_POST['id'];
@@ -125,42 +155,70 @@ if($role=="Admin")
                     $row=mysqli_fetch_assoc($rec);
        }
        ?>
-  <tr>
-      <td colspan="2" align="center"><input type="submit" style="width: 10em;  height: 2em; font-size: 15px;" name="chk" value="Check For Request" /> <br/><br/>  </td>
-    </tr>
-       </table>
-       </div>
-           <br/>
-           <div style="background-color: beige; margin-left: 33%; alignment-adjust: central; width: 35%">
-           <table align="center"  width="100%" cellspacing="05" cellpadding="05">
-       <tr>
-           <br/><br/>
-           <td>&nbsp; <br/></td>
-           <td align="right"><br/><font size="5">Student ID&nbsp;:&nbsp;</font></td>
-           <td><br/><input  id="in"type="text" name="sid" value="<?php echo $row['s_id'];?>"></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td align="right"><font size="5">Faculty ID&nbsp;:&nbsp;</font></td>
-    <td><input id="in" type="text" name="faid" value="<?php echo $row['f_id'];?>"></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td align="right"><font size="5">Project ID&nbsp;:&nbsp;</font></td>
-    <td><input id="in" type="text" name="projectid" value=""/><font color="red">*</font></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr align="center">
-    <td>&nbsp;</td>
-    <td colspan="2"><input id="bt" type="submit" name="allocate" value="Allocate" />    				
-    <td>&nbsp;</td>
-  </tr>
-</table>
-      </div>
-  </form>
- <?php
+
+           <div class="text-center">
+                                <input  type="submit" class="submit" name="chk" value="Check for Request" />
+                            </div>
+
+
+                            </div>
+                </div>
+         <div class="display-box">
+                                             <div class="input-group">
+
+                                             <div class="input-group-prepend">
+                                        <label>StudentID:</label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="sid" name="sid" value="<?php echo $row['s_id'];?>" style="color: #fff;"/>
+                                </div>
+                                <br>
+
+
+                                <div class="input-group">
+
+                                             <div class="input-group-prepend">
+                                        <label>FacultyID:</label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="faid" value="<?php echo $row['f_id'];?>" style="color: #fff;"/>
+                                </div>
+                                <br>
+
+                                <div class="input-group">
+
+                                             <div class="input-group-prepend">
+                                        <label>ProjectID:</label>
+                                    </div>
+                                    <input id="in" type="text" class="textbox" name="projectid" style="color: #fff;" value="" />
+                                   
+                                </div>
+                                <br> 
+                              <div class="text-center">
+                                <input id="bt" type="submit" class="submit" name="update" value="Update"  />
+                            </div>
+
+                            </div>
+
+                   </form>
+                 </div>
+               </div>
+             </div>
+           </div>
+         
+                   <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script type="text/javascript">
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+      </script> 
+
+      <?php
 }
 elseif($role=="Faculty")    
 {
@@ -183,6 +241,3 @@ else
 <?php
 }
 ?>
-      
-
-

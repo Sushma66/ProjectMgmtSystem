@@ -132,21 +132,21 @@ if($role=="Admin")
             
                         <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <label>Faculty ID:&nbsp;<font color="red">*</font></label>
-                                    </div>
+                                        <label>Faculty ID :<font color="red">*</font></label>
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <?php
                                      include '../connection.php';
                                      $sql="select f_id from faculty";
                                      $result=  mysqli_query($conn, $sql)
                          ?>
                           <select name="id" style="width: 10em; height: 2em; font-size: 15px;">
-                        <option >Faculty</option>
+                        <option selected="selected">Faculty</option>
                        <?php
                  while($row = mysqli_fetch_assoc($result))
                  {
                      $category= $row['f_id'];
                      ?>
-                 <option selected="selected" value="<?php echo $category; ?>"><?php echo $category;?></option>
+                 <option value="<?php echo $category; ?>"><?php echo $category;?></option>
                  <?php
                  }
                  ?>
@@ -160,7 +160,7 @@ if($role=="Admin")
                   </div>
                 </div>
 
-                <div class="display-box">
+                <div class="display-box" style="margin-top: 0;">
                   <?php
                     if (isset($_POST['search']))
                 {
@@ -177,35 +177,35 @@ if($role=="Admin")
                                              <div class="input-group-prepend">
                                         <label>FacultyID:</label>
                                     </div>
-                                    <input id="in" type="text" class="textbox" name="fid" value="<?php echo $row['f_id'];?>" style="color: #fff;"/>
+                                    <input id="in" type="text" class="textbox" name="fid" value="<?php if(isset($row['f_id'])) { echo $row['f_id'];}?>" style="color: #fff;"/>
                                 </div>
                                 <br>
                                      <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Name:</label>
                                     </div>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input id="in" type="text" class="textbox" name="faname" value="<?php echo $row['name'];?>"style="color: #fff;"> 
+                                    <input id="in" type="text" class="textbox" name="faname" value="<?php if(isset($row['name'])) { echo $row['name'];}?>"style="color: #fff;"> 
                                 </div>
                                 <br>
                             <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Email:</label>
                                     </div>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input id="in" type="text" class="textbox" name="faemail" value="<?php echo $row['email'];?>"style="color: #fff;">
+                                    <input id="in" type="text" class="textbox" name="faemail" value="<?php if(isset($row['email'])) {echo $row['email'];}?>"style="color: #fff;">
                                 </div>
                                  <br>
                            <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Phone:</label>
                                     </div>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input id="in" type="text" class="textbox" name="faphone" value="<?php echo $row['phone'];?>"style="color: #fff;">
+                                    <input id="in" type="text" class="textbox" name="faphone" value="<?php if(isset($row['phone'])) {echo $row['phone'];}?>"style="color: #fff;">
                                 </div>
                                  <br>
                      <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Password:</label>
                                     </div>
-                                    <input id="in" type="text" class="textbox" name="fapass" value="<?php echo $row['password'];?>" style="color: #fff;">
+                                    <input id="in" type="text" class="textbox" name="fapass" value="<?php if(isset($row['password'])) {echo $row['password'];}?>" style="color: #fff;">
                                 </div>
                                  <br>
                                   <div class="input-group">
@@ -213,7 +213,7 @@ if($role=="Admin")
                                         <label>Qualification:</label>
                                     </div> 
                                      <br>
-                                    <input id="in" type="text" class="textbox" name="faqualification" value="<?php echo $row['qualification'];?>" style="color: #fff;">
+                                    <input id="in" type="text" class="textbox" name="faqualification" value="<?php if(isset($row['qualification'])) {echo $row['qualification'];}?>" style="color: #fff;">
                                 </div>
                                
                             <br>

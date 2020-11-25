@@ -125,21 +125,21 @@ if($role=="Admin")
             
                         <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <label>Student ID         &nbsp;&nbsp; &nbsp; &nbsp;  :</label>
-                                    </div>
+                                        <label>Student ID :</label>
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                                     <?php
             include '../connection.php';
              $sql="select s_id from student";
              $result=  mysqli_query($conn, $sql)
              ?> <select name="id" style="width: 10em; height: 2em; font-size: 15px;">
-                 <option >Student</option>
+                 <option selected="selected">Student</option>
                  <?php
                  while($row = mysqli_fetch_assoc($result))
                  {
                      $category= $row['s_id'];
                      ?>
-                 <option selected="selected" value="<?php echo $category; ?>"><?php echo $category;?></option>
+                 <option value="<?php echo $category; ?>"><?php echo $category;?></option>
                  <?php
                  }
      ?>
@@ -163,13 +163,13 @@ if($role=="Admin")
 
                             </div>
                 </div>
-         <div class="display-box">
+         <div class="display-box" style="margin-top: 0;">
                                              <div class="input-group">
 
                                              <div class="input-group-prepend">
                                         <label>StudentID:</label>
                                     </div>
-                                    <input id="in" type="text" class="textbox" name="sid" name="sid" value="<?php echo $row['s_id'];?>" style="color: #fff;"/>
+                                    <input id="in" type="text" class="textbox" name="sid" name="sid" value="<?php if(isset($row['s_id'])) {echo $row['s_id'];}?>" style="color: #fff;"/>
                                 </div>
                                 <br>
 
@@ -178,8 +178,8 @@ if($role=="Admin")
 
                                              <div class="input-group-prepend">
                                         <label>FacultyID:</label>
-                                    </div>
-                                    <input id="in" type="text" class="textbox" name="faid" value="<?php echo $row['f_id'];?>" style="color: #fff;"/>
+                                    </div>&nbsp;
+                                    <input id="in" type="text" class="textbox" name="faid" value="<?php if(isset($row['f_id'])) { echo $row['f_id']; }?>" style="color: #fff;"/>
                                 </div>
                                 <br>
 

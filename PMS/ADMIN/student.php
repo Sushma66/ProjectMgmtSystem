@@ -101,21 +101,21 @@ if($role=="Admin")
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Name:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="stname" style="color: #fff;"> 
                                 </div>
                                 <br>
                             <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Email:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="stemail" style="color: #fff;">
                                 </div>
                                 <br>
                            <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Phone:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="stphone" style="color: #fff;">
                                 </div>
                                 <br>
@@ -129,14 +129,14 @@ if($role=="Admin")
                                   <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Year:<font color="red">*</font></label>
-                                    </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="styear" style="color: #fff;">
                                 </div>
                                 <br>
                                <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <label>Stream           :   <font color="red">*</font></label>
-                                    </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>Stream :<font color="red">*</font></label>
+                                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <select name="stream" style="width: 193px; height: 2em; font-size: 15px;">
                                        <option value="Selcet">Select</option>
                                        <option value="CSE">CSE</option>

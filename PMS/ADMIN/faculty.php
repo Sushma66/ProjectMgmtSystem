@@ -94,35 +94,35 @@ if($role=="Admin")
                         <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>FacultyID:<font color="red">*</font></label>
-                                    </div>
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="id" style="color: #fff;">
                                 </div>
                                 <br>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Name:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="faname" style="color: #fff;"> 
                                 </div>
                                 <br>
                             <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Email:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="faemail" style="color: #fff;">
                                 </div>
                                 <br>
                            <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Phone:<font color="red">*</font></label>
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="faphone" style="color: #fff;">
                                 </div>
                                 <br>
                            <div class="input-group">
                                     <div class="input-group-prepend">
                                         <label>Password:<font color="red">*</font></label>
-                                    </div>
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input id="in" type="text" class="textbox" name="fapass" style="color: #fff;">
                                 </div>
                                 <br>

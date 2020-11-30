@@ -1,75 +1,75 @@
 /*------------------------------------------------------------Logo and BMSIT-----------------------------------------------------------------------------------*/
 
 body {
-  background-image: url(../images/environment.png);
-  background-position: center;
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
+	background-image: url(../images/environment.png);
+	background-position: center;
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+	width: 100%;
 }
 
 .container-fluid {
-  height: inherit;
+	height: inherit;
 } 
 
 .topnavbar {
-  background-color: #a50034;
-  /*padding-bottom: 1%;*/
-  -webkit-box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
-  box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
-  position: relative;
+	background-color: #a50034;
+	/*padding-bottom: 1%;*/
+	-webkit-box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
+	box-shadow: -1px 9px 15px -2px rgba(0,0,0,0.75);
+	position: relative;
 
 }
 
 .message-box {
-  display: inline;
-  float: right;
-  margin: 0;
-  padding: 1%;
+	display: inline;
+	float: right;
+	margin: 0;
+	padding: 1%;
 }
 
 .message {
-  color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 140%;
-  font-weight: bold;
-  
+	color: #fff;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 140%;
+	font-weight: bold;
+	
 }
 
 .institute {
-  font-family: Calibri; 
-  color: #fff; 
-  font-size: 118%; 
-  font-weight: 600;
+	font-family: Calibri; 
+	color: #fff; 
+	font-size: 118%; 
+	font-weight: 600;
 }
 
 .bms {
-  font-family: Arial; 
-  font-size: 130%; 
-  color: #fff; 
-  font-weight: 600;
+	font-family: Arial; 
+	font-size: 130%; 
+	color: #fff; 
+	font-weight: 600;
 }
 
 .bmsit {
-  font-family: Arial; 
-  font-size: 130%; 
-  color: #fff; 
-  font-weight: 600;
-  display: none;
+	font-family: Arial; 
+	font-size: 130%; 
+	color: #fff; 
+	font-weight: 600;
+	display: none;
 }
 
 @media screen and (max-width: 510px) {
   .bms {
-    display: none;
+  	display: none;
   }
   .institute {
-    display: none;
+  	display: none;
   }
   .bmsit {
-    display: inline-block;
+  	display: inline-block;
   }
 }
 

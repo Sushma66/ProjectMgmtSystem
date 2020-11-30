@@ -84,19 +84,20 @@ if($role=="Admin")
 </div>
 
 </br></br></br>
-        <table  border="1" align="center" width="60%">
+      <div style="overflow-x:auto;">
+        <table  width="60%" cellpadding="05" cellspacing="01" border="0" align="center">
             <?php
                 echo "<tr>";
                 echo "<th>"." Meeting ID "."</th>";
-                echo "<th>" ?> &nbsp; <?php "</th>";
+                echo "<th>" ?> <?php "</th>";
                 echo "<th>"." Faculty ID "."</th>";
-                echo "<th>" ?> &nbsp; <?php "</th>";
+                echo "<th>" ?> <?php "</th>";
                 echo "<th>"."Student ID"."</th>";
-                echo "<th>" ?> &nbsp; <?php "</th>";
+                echo "<th>" ?><?php "</th>";
                 echo "<th>"."Date"."</th>";
-                echo "<th>" ?> &nbsp; <?php "</th>";
+                echo "<th>" ?><?php "</th>";
                 echo "<th>"."Time"."</th>";
-                echo "<th>" ?> &nbsp; <?php "</th>";
+                echo "<th>" ?><?php "</th>";
                 echo "<th>"."Description"."</th>";
                 echo "</tr>";
                 include './connection.php';
@@ -104,7 +105,7 @@ if($role=="Admin")
                 $rec=mysqli_query($conn, $sql1);
                 while ($std=mysqli_fetch_assoc($rec))
                 {
-                    ?> <tr bgcolor="beige" align="center"><?php
+                    ?> <tr align="center"><?php
                     echo "<td>".$std['meeting_id']."<td/>";
                     echo "<td>".$std['f_id']."<td/>"; 
                     echo "<td>".$std['s_id']."<td/>"; 
@@ -115,6 +116,7 @@ if($role=="Admin")
                 }
             ?>
         </table>
+      </div>
 <?php
   }
   elseif($role=="Faculty")    

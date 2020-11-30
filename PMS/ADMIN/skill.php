@@ -89,18 +89,18 @@ if($role=="Admin")
           </a>
     </div>
   </div>
-</div>
 
-</br>
 <br>
-<form method="post" action="skill.php"> 
-<div class="container-fluid" align="center">
-  <div class="row justify-content-center">
-    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+<br>
+
+<!-- <div class="container-fluid" align="center"> -->
+  <div class="row">
+    <div class="col-md-12">
         <div class="display-box">
+          <form method="post" action="skill.php"> 
           <div class="message1">
              <label style="float: center;"></label>
-                <label>Faculty ID : &nbsp;&nbsp;</label>              
+                <label>Faculty ID: &nbsp;&nbsp;</label>              
               <?php
                  include '../connection.php';
                  $sql="select f_id from faculty";
@@ -136,56 +136,57 @@ if($role=="Admin")
   ?>
   <br>
   <br>
-  <div class="row justify-content-center">
-    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+  <div class="row">
+    <div class="col-md-12">
        <div class="display-box"  style="padding-left: 4%">
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Faculty ID : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="faid" value="<?php echo $row['f_id'];?>"/> 
+              <label>Faculty ID: </label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox" readonly name="faid" value="<?php if(isset($row['f_id'])) { echo $row['f_id'];}?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Name : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="faname" value="<?php echo $row['name'];?>"/>
+              <label>Name:</label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox" readonly name="faname" value="<?php if(isset($row['name'])) { echo $row['name'];}?>"/>
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Qualification : </label>
+              <label>Qualification:</label>
             </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="faqualification" value="<?php echo $row['qualification'];?>"/> 
+              <input  id="in" type="text" class="textbox"  readonly name="faqualification" value="<?php if(isset($row['qualification'])) { echo $row['qualification'];}?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Domain : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="fadomain" value="<?php echo $row['domain'];?>"/>
+              <label>Domain:</label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox"  readonly name="fadomain" value="<?php if(isset($row['domain'])) { echo $row['domain'];}?>"/>
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Research : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="faresearch" value="<?php echo $row['research'];?>"/>
+              <label>Research:</label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox" readonly name="faresearch" value="<?php if(isset($row['research'])) {echo $row['research'];}?>"/>
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">   
-              <label>Others : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" readonly name="faothers" value="<?php echo $row['others'];?>"/>
+              <label>Others:</label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox" readonly name="faothers" value="<?php if(isset($row['others'])) {echo $row['others'];}?>"/>
           </div>
       </div>
+      </form>
   </div>
 </div>
 
 </div> 
-</form>
+
 <br>
 <br>
 <?php

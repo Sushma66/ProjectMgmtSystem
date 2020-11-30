@@ -31,7 +31,7 @@ else
     <link rel="icon" type="image/png" href="../images/logo.png" type="image/x-icon">
     <title>Project Management System</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/studentstyles.css" rel="stylesheet">
+    <link href="../css/projectstyles.css" rel="stylesheet">
   </head>
   <div>
   <body>
@@ -59,7 +59,7 @@ else
     <link rel="icon" type="image/png" href="../images/logo.png" type="image/x-icon">
     <title>Project Management System</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/studentstyles.css" rel="stylesheet">
+    <link href="../css/projectstyles.css" rel="stylesheet">
   </head>
 <!--   <div> -->
   <!-- <body>
@@ -162,7 +162,8 @@ else
     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
       <form method="post" action="skill.php"> 
       <div class="display-box">
-        <h3><u>Skills</u></h3>
+        <h5>Skills</h5>
+        <br>
         <div class="message1">
         <label style="float: center;"></label>
         <?php
@@ -170,7 +171,7 @@ else
              $sql="select f_id from faculty";
              $result=  mysqli_query($conn, $sql)
         ?> 
-        <select name="faculty">
+        <select name="faculty" class="dropdown">
              <option selected="selected"><h3>Supervisors</h3></option>
              <?php
                  while($row = mysqli_fetch_assoc($result))
@@ -208,8 +209,8 @@ else
           <div class="input-group">
            <div class="input-group-prepend">
               <label>Faculty ID : </label>
-            </div>  
-              <input id="in" type="text" class="textbox" style="color: #fff;" name="facultyid" readonly value="<?php echo $fid;?>" readonly>
+            </div> &nbsp;&nbsp;&nbsp;&nbsp; 
+              <input id="in" type="text" class="textbox" name="facultyid" readonly value="<?php echo $fid;?>" readonly>
           </div> 
         <?php
             $sql1="select * from faculty where f_id ='$fid' ";
@@ -221,36 +222,36 @@ else
           <div class="input-group">
             <div class="input-group-prepend">   
               <label>Name : </label>
-            </div>   
-              <input  id="in" type="text" class="textbox" style="width:50%, color: #fff;" name="stid" readonly value="<?php echo $std['name'];?>"/> 
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input  id="in" type="text" class="textbox" name="stid" readonly value="<?php echo $std['name'];?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">
               <label>Qualification : </label>
-            </div>  
-               <input id="in" type="text" class="textbox" style="width:50%, color: #fff;" name="faqu" readonly value="<?php echo $std['qualification'];?>"/> 
+            </div>
+               <input id="in" type="text" class="textbox"  name="faqu" readonly value="<?php echo $std['qualification'];?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">
               <label>Domain : </label>
-            </div>  
-                <input id="in" type="text" class="textbox" style="width:50%, color: #fff;" name="fad" readonly value="<?php echo $std['domain'];?>"/> 
+            </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input id="in" type="text" class="textbox" name="fad" readonly value="<?php echo $std['domain'];?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">
               <label>Research : </label>
-            </div>    
-                <input id="in" type="text" class="textbox" style="width:50%, color: #fff;" name="far" readonly value="<?php echo $std['research'];?>"/> 
+            </div> &nbsp;&nbsp;&nbsp;&nbsp;    
+                <input id="in" type="text" class="textbox" name="far" readonly value="<?php echo $std['research'];?>"/> 
           </div>
 
           <div class="input-group">
             <div class="input-group-prepend">
               <label>Others : </label>
-            </div>
-                <input id="in" type="text" class="textbox" style="width:50%, color: #fff;" name="fao" readonly value="<?php echo $std['others'];?>"/> 
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="in" type="text" class="textbox" name="fao" readonly value="<?php echo $std['others'];?>"/> 
           </div>
           <br>
           <div class="text-center">

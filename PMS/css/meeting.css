@@ -255,6 +255,10 @@ label {
         box-shadow: none,0 0 0 .2rem rgba(33,150,243,.25);
     }
 
+h5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 textarea {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   height: 100%;

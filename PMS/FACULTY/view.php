@@ -3,7 +3,7 @@ session_start();
 $user =  $_SESSION['Email'];
 $role = $_SESSION['Role'];
 
-// include '../connection.php';
+ include '../connection.php';
 // $sql="select s_id from project where f_id='$user';"; 
 //$record=mysqli_query($conn, $sql);
 if (isset($_POST['ppf']))

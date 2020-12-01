@@ -171,7 +171,7 @@ else
           </a>
     </div>
   </div>
-</div>
+<!-- </div> -->
     <br><br>
 <?php
 }
@@ -181,77 +181,82 @@ else
 }
 ?>    
 </p>
-    <form method="post" action="project.php" enctype="multipart/form-data">
-    <div class="row" style="width: 100%; margin: 0;">
-       <div class="col-md-6 col-lg-6" style="padding: 0;">
-        <div class="display-box">
-          <h5>Project Proposal</h5>
-          <br />
-          <div>
-            <input type='file' name="ppf">
-            <!-- <label id="fileLabel">Choose file</label> -->
-          </div>
-          <br/>
-          <input type="submit" class="submit" name="bppf" value="Upload"/>
-        </div>
+
+<form method="post" action="project.php" enctype="multipart/form-data">
+<!--  <div class="container-fluid" align="center"> -->
+  <div class="row justify-content-center" align="center">
+     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+      <div class="display-box">
+        <h4>Project Proposal</h4>
+        <br>
+        <div class="message1">
+        <label style="float: center;"></label>
+        <input type="file" name="ppf"/><br/><br/>
+        <input id="bt" type="submit" class="submit" name="bppf" value="Upload"/>
+        <br/>
       </div>
-      <br><br>
-      <div class="col-md-6 col-lg-6" style="padding: 0;">
-        <div class="display-box">
-          <h5>Project Specification</h5>
-          <br />
-          <div>
-            <input type='file' name="psf">
-            <!-- <label id="fileLabel" style="margin-left: 2%; color: #fff;">No file chosen</label> -->
-          </div>
-          <br/>
-          <input type="submit" class="submit" name="bpsf" value="Upload"/>
-        </div>
-      </div> 
+      </div>
     </div>
-    </form> 
-    <form method="post" action="project.php"> 
-    <div class="row" style="width: 100%; margin: 0;">
-      <div class="col-md-12 col-lg-12" style="padding: 0;">
-        <div class="display-box text-container">
-          <?php
-           if(isset ($_POST['feedback']))
+    </br></br><br><br>
+
+     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+      <div class="display-box" >
+        <h4>Project Specification</h4>   
+        <br> 
+        <div class="message1">
+        <label style="float: center;"></label>
+        <input type="file" name="psf"/><br/><br/>
+        <input id="bt" type="submit" class="submit" name="bpsf" value="Upload"/>
+        <br/>
+      </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+</form>
+<br><br>
+
+<form method="post" action="project.php"> 
+<!--   <div class="container-fluid" align="center"> -->
+  <div class="row justify-content-center" align="center">
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+      <div class="display-box" >
+        <h4>Feedback</h4>    
+        <br>
+        <div class="message1">
+        <label style="float: center;"></label>
+        <?php
+          if(isset ($_POST['feedback']))
           {
             include '../connection.php';
             $sql1="select * from project where s_id ='$user' ";
             $rec=mysqli_query($conn, $sql1);
             while($std=mysqli_fetch_assoc($rec))
             {
-            ?>
-            <textarea name="feedback" rows="5" cols="30" readonly="readonly" placeholder="FEEDBACK">
-            <?php echo $std['remark'];?>
-            </textarea>
-            <br>
-            <?php 
+        ?>
+        <div class="form-control">
+        <!-- <textarea name="feedback" width="100%" height="auto" float="justify-content-center" readonly="  readonly" placeholder="FEEDBACK"> -->
+        <?php echo $std['remark'];
+        ?>
+        <!-- </textarea> -->
+        </div></br>
+        <?php 
             }
-            }
-            ?>
-            <input type="submit" name="feedback" class="submit feedback-submit" value="Get Feedback"/>
-        </div>
+          }
+        ?>
+         </br>
+        <input id="bt"  type="submit" class="submit" name="feedback" value="Get Feedback"/><br/>
+      </div>
       </div>
     </div>
-    </form> 
-</div>
-<script type="text/javascript">
-  // window.pressed = function(){
-  //   var a = document.getElementById('aa');
-  //   if(a.value == "")
-  //   {
-  //       fileLabel.innerHTML = "Choose file";
-  //   }
-  //   else
-  //   {
-  //       var theSplit = a.value.split('\\');
-  //       fileLabel.innerHTML = theSplit[theSplit.length-1];
-  //   }
-  // }
-
- function myFunction() {
+  </div>
+</div> 
+<br/><br>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -259,6 +264,6 @@ else
     x.className = "topnav";
   }
 }
-</script>
-</body>
+      </script>   
+  </body>
 </html>

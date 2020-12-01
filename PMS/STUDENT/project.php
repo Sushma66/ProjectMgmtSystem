@@ -197,7 +197,6 @@ else
       </div>
       </div>
     </div>
-    </br></br><br><br>
 
      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
       <div class="display-box" >
@@ -214,13 +213,12 @@ else
   </div>
 <!-- </div> -->
 </form>
-<br><br>
 
 <form method="post" action="project.php"> 
 <!--   <div class="container-fluid" align="center"> -->
   <div class="row justify-content-center" align="center">
     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-      <div class="display-box" >
+      <div class="display-box text-container">
         <h4>Feedback</h4>    
         <br>
         <div class="message1">

@@ -232,7 +232,7 @@ header("location:../Admin.php");
           <?php "</td>";
           echo "<td>"?>
           <input name="file_name1" class="textbox" value="<?php echo $std["psf"]?>" type="text" readonly /><br/><br/>
-          <a href="<?php echo "../ppf/".$std["psf"]?>" class="submit" name="psf" download>Download</a>  
+          <a href="<?php echo "../psf/".$std["psf"]?>" class="submit" name="psf" download>Download</a>  
           <?php "</td>";
           echo "<td>"?>
           <textarea  name="assessmen" cols="30" rows="5" ></textarea><br/><br/>

@@ -255,7 +255,7 @@ else
           </div>
           <br>
           <div class="text-center">
-                <input id="bt" type="submit" class="submit" name="allocate" readonly value="Request For Allocate"/> 
+                <input id="bt" type="submit" class="submit" name="allocate" value="Request For Allocate"/> 
           </div>      
          <?php
             }

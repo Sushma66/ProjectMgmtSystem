@@ -142,7 +142,7 @@ if($role=="Admin")
           <div class="input-group">
             <div class="input-group-prepend">   
               <label>Faculty ID: </label>
-            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input  id="in" type="text" class="textbox" readonly name="faid" value="<?php if(isset($row['f_id'])) { echo $row['f_id'];}?>"/> 
           </div>
 
@@ -156,7 +156,7 @@ if($role=="Admin")
           <div class="input-group">
             <div class="input-group-prepend">   
               <label>Qualification:</label>
-            </div>   
+            </div>&nbsp;&nbsp;  
               <input  id="in" type="text" class="textbox"  readonly name="faqualification" value="<?php if(isset($row['qualification'])) { echo $row['qualification'];}?>"/> 
           </div>
 

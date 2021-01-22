@@ -37,8 +37,7 @@ else if($role == "Faculty")
 
 		if($count == 0)
 		{
-		echo "username password Incorrect";
-		redirect("login.php");
+			echo "Username Password Incorrect";
 		}
 		else
 		{
@@ -58,7 +57,7 @@ else
 
 		if($count == 0)
 		{
-		echo "username password Incorrect";
+		echo "Username Password Incorrect";
 		}
 		else
 		{

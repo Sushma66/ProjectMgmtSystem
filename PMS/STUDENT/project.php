@@ -14,8 +14,8 @@ if (isset($_FILES['ppf']))
     $file_error=$file['error'];
     // work out the extension
     $file_ext = explode('.', $file_name);
-    $file_ext=  strtolower(end($file_ext));
-    $allowed= array('docx','doc','txt','pdf');
+    $file_ext =  strtolower(end($file_ext));
+    $allowed = array('docx','doc','txt','pdf');
     
     if(in_array($file_ext, $allowed))
     {
@@ -29,7 +29,7 @@ if (isset($_FILES['ppf']))
                 {
                     //echo $file_destination;
                     include '../connection.php';
-                    $sql = "UPDATE project SET ppf='$file_name' WHERE s_id='$user'";
+                    $sql = "UPDATE project SET ppf='$file_name_new' WHERE s_id='$user'";
                     mysqli_query($conn, $sql);
                     $conn->close();
                     header('Location:project.php'); 
@@ -66,7 +66,7 @@ if (isset($_FILES['psf']))
                 {
                     //echo $file_destination;
                     include '../connection.php';
-                    $sql = "UPDATE project SET psf='$file_name' WHERE s_id='$user'";
+                    $sql = "UPDATE project SET psf='$file_name_new' WHERE s_id='$user'";
                     mysqli_query($conn, $sql);
                     $conn->close();
                     header('Location:project.php'); 

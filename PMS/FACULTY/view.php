@@ -8,21 +8,24 @@ $role = $_SESSION['Role'];
 //$record=mysqli_query($conn, $sql);
 if (isset($_POST['ppf']))
 {
-    $file=$_POST['file_name'];
-    if(!empty($file)){
-      header('Content-Description: File Transfer');
-      header('Content-Type:doc/pdf');
-      header('Content-Disposition: attachment; filename="'.$file.'"');
-      readfile('ppf/'.$file);
-      exit();
+    $file="ppf".$_POST['file_name'];
+    if(!empty($file))
+    {
+       $filetype=filetype($file);
+       $filename=basename($file);
+       header ("Content-Type: ".$filetype);
+       header ("Content-Length: ".filesize($file));
+       header ("Content-Disposition: attachment; filename=".$filename);
+       readfile($file);
     }
-    else {
+    else 
+    {
       echo 'no file';
     }
 }
 elseif (isset($_POST['psf']))
 {
-    $file=$_POST['file_name1'];
+    $file="psf".$_POST['file_name1'];
     if(!empty($file)) {
       header('Content-type:doc/pdf');
       header('Content-Disposition: attachment; filename="'.$file.'"');
@@ -224,12 +227,12 @@ header("location:../Admin.php");
         while ($std=mysqli_fetch_assoc($rec)) {
           echo "<td>"?> 
           <input name="file_name" value="<?php echo $std["ppf"]?>" class="textbox" type="text" readonly /><br/><br/>
-          <input type="submit" value="Download" class="submit" name="ppf"/> 
+          <a href="<?php echo "../ppf/".$std["ppf"]?>" class="submit" name="ppf" download>Download</a> 
           <input type="hidden" name="pid" value="<?php echo $std['p_id']?>"/> 
           <?php "</td>";
           echo "<td>"?>
           <input name="file_name1" class="textbox" value="<?php echo $std["psf"]?>" type="text" readonly /><br/><br/>
-          <input type="submit" class="submit" value="Download" name="psf"/> 
+          <a href="<?php echo "../ppf/".$std["psf"]?>" class="submit" name="psf" download>Download</a>  
           <?php "</td>";
           echo "<td>"?>
           <textarea  name="assessmen" cols="30" rows="5" ></textarea><br/><br/>

@@ -112,7 +112,7 @@ if($role=="Admin")
             <span class="material-icons hidden-md-down">insights</span><br class="hidden-md-down"> Skill Matrix
           </a>
 
-          <a class="nav-link" href="ADMIN/report.php">
+          <a class="nav-link" href="report.php">
             <span class="material-icons hidden-md-down">description</span><br class="hidden-md-down"> Reports
           </a>
        

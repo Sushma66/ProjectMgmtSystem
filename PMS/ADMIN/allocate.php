@@ -23,7 +23,6 @@ if(isset($_POST['allocate']))
                 header('Location:allocate.php');  
            }
         else
-            
         {
               echo 'Please fill up all fields';
               header('Location:allocate.php');
@@ -106,7 +105,7 @@ if($role=="Admin")
             <span class="material-icons hidden-md-down">insights</span><br class="hidden-md-down"> Skill Matrix
           </a>
 
-          <a class="nav-link" href="ADMIN/report.php">
+          <a class="nav-link" href="report.php">
             <span class="material-icons hidden-md-down">description</span><br class="hidden-md-down"> Reports
           </a>
        
@@ -129,7 +128,7 @@ if($role=="Admin")
                                     </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                                     <?php
-            include '../connection.php';
+            include './connection.php';
              $sql="select s_id from student";
              $result=  mysqli_query($conn, $sql)
              ?> <select name="id" style="width: 10em; height: 2em; font-size: 15px;">
